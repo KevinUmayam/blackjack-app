@@ -13,6 +13,8 @@ export const crearDeck = (tiposDeCarta, tiposEspeciales) => {
 
     if (!tiposDeCarta || tiposDeCarta.length === 0) throw Error('tipos de cartas es obligatorio como un arreglo  de string')
 
+    if (!tiposEspeciales || tiposEspeciales.length === 0) throw Error('tipos de cartas especiales es obligatorio como un arreglo  de string')
+
     for (let i = 2; i <= 10; i++) {
         for (let tipo of tiposDeCarta) {
             deck.push(i + tipo);
